@@ -20,8 +20,26 @@ class MyPlaceAddNewVC: UIViewController {
     var latitudeLocation: String! = "18.79974300"
     var longtitudeLocation: String! = "98.96545100"
     
-    var selectedType: Int = -1
-    var selectedProvince: Int = -1
+    var selectedType: Int = -1 {
+        didSet{
+            guard selectedType != -1 else {
+                return
+            }
+            
+           
+            selectType.setTitle(PlaceSizeID(rawValue: selectedType)?.GetName, for: .normal)
+            
+         
+        }
+    }
+    var selectedProvince: Int = -1 {
+        didSet{
+            guard selectedProvince != -1 else {
+                return
+            }
+            selectProvince.setTitle(ProvinceID(rawValue: selectedProvince)?.GetName, for: .normal)
+        }
+    }
     
     let widthBorder:CGFloat = 15
     
@@ -91,6 +109,9 @@ class MyPlaceAddNewVC: UIViewController {
             if self.selectedType >= 7{
                 self.selectedType += 1
             }
+            
+            
+            self.selectType.titleLabel?.text = PlaceSizeID(rawValue: self.selectedType-1)?.GetName
         }
         
         // Will set a custom width instead of the anchor view width
@@ -114,6 +135,8 @@ class MyPlaceAddNewVC: UIViewController {
         dropDownProvince.selectionAction = { (index: Int, item: String) in
             print("Selected item: \(item) at index: \(index)")
             self.selectedProvince = index + 1
+            
+            self.selectProvince.titleLabel?.text = ProvinceID(rawValue: self.selectedProvince-1)?.GetName
         }
         
         // Will set a custom width instead of the anchor view width
@@ -219,6 +242,8 @@ class MyPlaceAddNewVC: UIViewController {
             selectedType -= 1
         }
         dropDownType.selectRow(at: selectedType - 1)
+        
+        selectedType = Int(itemEdit!.place_size_id!)!
         
     }
     
