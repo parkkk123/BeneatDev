@@ -186,7 +186,7 @@ class MyPlaceAddNewVC: UIViewController {
         newItem.province_id = String(selectedProvince)
         newItem.address = addressLabel.text
         newItem.latitude = latitudeLocation
-        newItem.longtitude = longtitudeLocation
+        newItem.longitude = longtitudeLocation
         newItem.remark = remarkLabel.text
         newItem.user_id = "1"
         
@@ -207,9 +207,10 @@ class MyPlaceAddNewVC: UIViewController {
         newItem.province_id = String(selectedProvince)
         newItem.address = addressLabel.text
         newItem.latitude = latitudeLocation
-        newItem.longtitude = longtitudeLocation
+        newItem.longitude = longtitudeLocation
         newItem.remark = remarkLabel.text
         newItem.user_id = "1"
+        newItem.id = itemEdit!.id
         
         dataSource.editDataWithID(newDataItem: newItem, position: posRowEdit!){
           
@@ -231,7 +232,7 @@ class MyPlaceAddNewVC: UIViewController {
         
         
         latitudeLocation = itemEdit?.latitude
-        longtitudeLocation = itemEdit?.longtitude
+        longtitudeLocation = itemEdit?.longitude
         
         selectedType = Int(itemEdit!.place_size_id!)!
         selectedProvince = Int(itemEdit!.province_id!)!

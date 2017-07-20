@@ -89,7 +89,7 @@ class MyPlaceDetailVC: UIViewController {
     public func configureDetails(){
         
         latitude = Double(item.latitude!)
-        longtitude = Double(item.longtitude!)
+        longtitude = Double(item.longitude!)
         
         let camera = GMSCameraPosition.camera(withLatitude: latitude, longitude: longtitude, zoom: 15.0)
         mapView.camera = camera

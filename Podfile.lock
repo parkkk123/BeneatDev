@@ -8,19 +8,22 @@ PODS:
     - GoogleMaps/Base
   - GooglePlaces (2.3.1):
     - GoogleMaps/Base (= 2.3.1)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - DropDown (~> 2)
   - GoogleMaps
   - GooglePlaces
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   GoogleMaps: c66a71058b9b1294bcdd5463a68e357fa50c079f
   GooglePlaces: 4a7b22debfa1af65017b82943431822607e45201
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 83003d7c62ffe485e283f7c904e7bc1c2fa2e89b
+PODFILE CHECKSUM: bcd932d83b5e20c5583ba943ad65beb5edf10bd9
 
 COCOAPODS: 1.2.1

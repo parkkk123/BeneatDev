@@ -28,6 +28,9 @@
 		1CA6D5ED1F0B8FF900989BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A35981F0B5C5000F3882C /* Assets.xcassets */; };
 		1CA6D5EE1F0B8FF900989BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A359A1F0B5C5000F3882C /* LaunchScreen.storyboard */; };
 		1CA6D5F51F0CAC9300989BEA /* MyPlaceAddNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6D5F41F0CAC9300989BEA /* MyPlaceAddNewVC.swift */; };
+		1CAD20AA1F20B683005858B2 /* LoadMoreMyPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CAD20A91F20B683005858B2 /* LoadMoreMyPlaceCell.xib */; };
+		1CAD20AC1F20B724005858B2 /* LoadMoreMyPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */; };
+		1CAD20AD1F20B961005858B2 /* LoadMoreMyPlaceCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */; };
 		1CB9134A1F0E2DEA00779A7B /* MyPlaceAddNewVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CA6D5F41F0CAC9300989BEA /* MyPlaceAddNewVC.swift */; };
 		506E60D46B344DA5C9CEADFB /* Pods_BeNeatDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A14F8C3FD94479DCF7979A6 /* Pods_BeNeatDev.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,8 @@
 		1C95E8BE1F0B88D8004785F6 /* MyPlaceDataModelItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPlaceDataModelItem.swift; path = Models/MyPlace/MyPlaceDataModelItem.swift; sourceTree = "<group>"; };
 		1C95E8C01F0B891B004785F6 /* MyPlaceDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPlaceDetailVC.swift; path = Controllers/MyPlaceList/MyPlaceDetailVC.swift; sourceTree = "<group>"; };
 		1CA6D5F41F0CAC9300989BEA /* MyPlaceAddNewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPlaceAddNewVC.swift; path = Controllers/MyPlaceList/MyPlaceAddNewVC.swift; sourceTree = "<group>"; };
+		1CAD20A91F20B683005858B2 /* LoadMoreMyPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadMoreMyPlaceCell.xib; path = Views/MyPlaceList/LoadMoreMyPlaceCell.xib; sourceTree = "<group>"; };
+		1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadMoreMyPlaceCell.swift; path = Views/MyPlaceList/LoadMoreMyPlaceCell.swift; sourceTree = "<group>"; };
 		3A14F8C3FD94479DCF7979A6 /* Pods_BeNeatDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeNeatDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEFE3D19839B3C8E589874A /* Pods-BeNeatDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeNeatDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeNeatDev/Pods-BeNeatDev.release.xcconfig"; sourceTree = "<group>"; };
 		C60B1857EC4A058BB5D4D5DC /* Pods-BeNeatDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeNeatDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeNeatDev/Pods-BeNeatDev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +142,8 @@
 			children = (
 				1C95E8B61F0B887D004785F6 /* MyPlaceCell.swift */,
 				1C95E8B71F0B887D004785F6 /* MyPlaceCell.xib */,
+				1CAD20A91F20B683005858B2 /* LoadMoreMyPlaceCell.xib */,
+				1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */,
 			);
 			name = MyPlaceList;
 			sourceTree = "<group>";
@@ -246,7 +253,9 @@
 				1CA6D5E61F0B8FF900989BEA /* MyPlaceDetailVC.swift in Resources */,
 				1CA6D5E71F0B8FF900989BEA /* MyPlaceCell.swift in Resources */,
 				1CA6D5E81F0B8FF900989BEA /* MyPlaceCell.xib in Resources */,
+				1CAD20AA1F20B683005858B2 /* LoadMoreMyPlaceCell.xib in Resources */,
 				1CB9134A1F0E2DEA00779A7B /* MyPlaceAddNewVC.swift in Resources */,
+				1CAD20AD1F20B961005858B2 /* LoadMoreMyPlaceCell.swift in Resources */,
 				1CA6D5E91F0B8FF900989BEA /* MyPlaceDataModelItem.swift in Resources */,
 				1CA6D5EA1F0B8FF900989BEA /* AppDelegate.swift in Resources */,
 				1CA6D5EB1F0B8FF900989BEA /* ViewController.swift in Resources */,
@@ -313,6 +322,7 @@
 			files = (
 				1C73DFE21F137453006614F1 /* AlamofireRouter.swift in Sources */,
 				1CA6D5F51F0CAC9300989BEA /* MyPlaceAddNewVC.swift in Sources */,
+				1CAD20AC1F20B724005858B2 /* LoadMoreMyPlaceCell.swift in Sources */,
 				1C95E8BF1F0B88D8004785F6 /* MyPlaceDataModelItem.swift in Sources */,
 				1C95E8C11F0B891B004785F6 /* MyPlaceDetailVC.swift in Sources */,
 				1C6A35941F0B5C5000F3882C /* ViewController.swift in Sources */,

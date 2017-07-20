@@ -9,11 +9,12 @@
 import UIKit
 import Alamofire
 
+
 enum AlamofireRouter: URLRequestConvertible {
     
-    case getDataMyPlace
-    case deleteMyPlace(id: Int)
-    case updateMyPlace(id: Int,item : MyPlaceDataModelItem)
+    case getDataMyPlace(page: Int ,user_id: Int)
+    case deleteMyPlace(id: String)
+    case updateMyPlace(id: String,item : MyPlaceDataModelItem)
     case addMyPlace(item: MyPlaceDataModelItem)
     case getDetailMyPlace(id: Int)
     
@@ -23,14 +24,15 @@ enum AlamofireRouter: URLRequestConvertible {
         var mutableURLRequest = URLRequest(url: url)
         mutableURLRequest.httpMethod = method.rawValue
         mutableURLRequest.setValue("f16165fd153002b5bfe951e92288e874", forHTTPHeaderField: "Authorization")
+        mutableURLRequest.setValue("f16165fd153002b5bfe951e92288e874", forHTTPHeaderField: "api_key")
         
         return try Alamofire.JSONEncoding.default.encode(mutableURLRequest, with: parameters)
     }
     
     var path: String {
         switch self {
-        case .getDataMyPlace:
-            return "/users-places/"
+        case .getDataMyPlace(let page,let user_Id):
+            return "/users-places/?page=\(page)&user_id=\(user_Id)"
         case .deleteMyPlace:
             return "/users-places/"
         case .updateMyPlace:
@@ -71,16 +73,17 @@ enum AlamofireRouter: URLRequestConvertible {
                     "province_id": item.province_id!,
                     "address": item.address!,
                     "latitude": item.latitude!,
-                    "longitude": item.longtitude!,
+                    "longitude": item.longitude!,
                     "remark": item.remark!
             ]
         case .addMyPlace(let item):
-            return ["user_id": item.user_id!,
+            return ["user_id": "1",
                 "place_name": item.place_name!,
                 "place_size_id": item.place_size_id!,
                 "province_id": item.province_id!,
+                "address": item.address!,
                 "latitude": item.latitude!,
-                "longitude": item.longtitude!,
+                "longitude": item.longitude!,
                 "remark": item.remark!
                 
             ]
@@ -89,10 +92,15 @@ enum AlamofireRouter: URLRequestConvertible {
         }
     }
     
-//    public var headers: [String: String]? {
-//        return ["Authorization": "f16165fd153002b5bfe951e92288e874"]
-//    }
-//    
+    public var headers: [String: String]? {
+        switch self {
+        case .updateMyPlace:
+            return ["Content-Type": "application/x-www-form-urlencoded"]
+        default:
+            return nil
+        }
+    }
+    
     
     
 }

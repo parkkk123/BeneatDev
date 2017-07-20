@@ -15,7 +15,7 @@ class MyPlaceDataModelItem {
     var province_id: String?
     var address: String?
     var latitude: String?
-    var longtitude: String?
+    var longitude: String?
     var remark: String?
     
 
