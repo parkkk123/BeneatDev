@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 
+
 class MyPlacesVC: UITableViewController {
 
     fileprivate var dataItems = [MyPlaceDataModelItem]() {
@@ -30,6 +31,8 @@ class MyPlacesVC: UITableViewController {
     var loadMoreEnable = true
     
     private let loadMoreEnableWithCount = 20
+    
+    fileprivate var itemsNewAdded = [String]()
     
 
   
@@ -182,11 +185,13 @@ extension MyPlacesVC: MyPlaceDataModelDelegate {
         myTableView.reloadData()
         pullToRefreshControl.endRefreshing()
         page = 0
+        itemsNewAdded = []
         
     }
     func didAddNewDataUpdate(data: MyPlaceDataModelItem) {
-        dataItems.append(data)
-        myTableView.reloadData()
+        dataItems.insert(data, at: 0)
+        itemsNewAdded.append(data.id!)
+        
         
     }
     func didEditDataUpdate(newDataItem: MyPlaceDataModelItem,pos: Int){
@@ -203,7 +208,13 @@ extension MyPlacesVC: MyPlaceDataModelDelegate {
     }
     
     func didLoadMoreReceiveDataUpdate(data: [MyPlaceDataModelItem], success: Bool) {
+        var data = data
         if success {
+            //filter data from added before out
+            for dataCheck in itemsNewAdded {
+                 data = data.filter{  $0.id != dataCheck }
+            }
+            
             dataItems += data
         }else{
             

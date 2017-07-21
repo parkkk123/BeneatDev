@@ -160,13 +160,29 @@ class MyPlaceAddNewVC: UIViewController {
 
     @IBAction func btnSave(_ sender: Any) {
         
-        guard namePlaceLabel.text != "" && addressLabel.text != "" && remarkLabel.text != "" else {
+        guard !namePlaceLabel.text!.isEmpty  else {
+            showAlertError(title: "User Places", msg: "กรุณากรอกชื่อสถานที่")
             return
         }
         
-        guard selectedType + 1 != 0 && selectedProvince + 1 != 0 else {
+        guard selectedType + 1 != 0  else {
+            showAlertError(title: "User Places", msg: "กรุณาเลือกประเภทที่พัก")
             return
         }
+        
+        guard selectedProvince + 1 != 0 else {
+            showAlertError(title: "User Places", msg: "กรุณาเลือกเมือง")
+            return
+        }
+        
+        guard  !addressLabel.text!.isEmpty  else {
+            showAlertError(title: "User Places", msg: "กรุณากรอกที่อยู่ของสถานที่")
+            return
+        }
+        
+        
+        
+        
         if isEditDetail {
             processDataToEdit()
         }else {
@@ -175,6 +191,17 @@ class MyPlaceAddNewVC: UIViewController {
         
         
         
+    }
+    func showAlertError(title: String,msg: String){
+        let alertController = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        
+      
+        let actionDismiss = UIAlertAction(title: "Dismiss", style: .cancel)
+        
+        alertController.addAction(actionDismiss)
+        
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func processDataToSave(){
