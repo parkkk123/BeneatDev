@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0A39AE1F22E79C00BA2D67 /* font in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A39AD1F22E79C00BA2D67 /* font */; };
 		1C60B7F51F0E6D7200166B79 /* MyPlaceDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60B7F41F0E6D7200166B79 /* MyPlaceDataModel.swift */; };
 		1C60B7F61F0E79E600166B79 /* MyPlaceDataModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1C60B7F41F0E6D7200166B79 /* MyPlaceDataModel.swift */; };
 		1C6A35921F0B5C5000F3882C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A35911F0B5C5000F3882C /* AppDelegate.swift */; };
-		1C6A35941F0B5C5000F3882C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6A35931F0B5C5000F3882C /* ViewController.swift */; };
 		1C73DFE21F137453006614F1 /* AlamofireRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C73DFE11F137453006614F1 /* AlamofireRouter.swift */; };
 		1C73DFE31F138DCA006614F1 /* AlamofireRouter.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1C73DFE11F137453006614F1 /* AlamofireRouter.swift */; };
 		1C95E8B81F0B887D004785F6 /* MyPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C95E8B61F0B887D004785F6 /* MyPlaceCell.swift */; };
@@ -23,7 +23,6 @@
 		1CA6D5E81F0B8FF900989BEA /* MyPlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C95E8B71F0B887D004785F6 /* MyPlaceCell.xib */; };
 		1CA6D5E91F0B8FF900989BEA /* MyPlaceDataModelItem.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1C95E8BE1F0B88D8004785F6 /* MyPlaceDataModelItem.swift */; };
 		1CA6D5EA1F0B8FF900989BEA /* AppDelegate.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A35911F0B5C5000F3882C /* AppDelegate.swift */; };
-		1CA6D5EB1F0B8FF900989BEA /* ViewController.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A35931F0B5C5000F3882C /* ViewController.swift */; };
 		1CA6D5EC1F0B8FF900989BEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A35951F0B5C5000F3882C /* Main.storyboard */; };
 		1CA6D5ED1F0B8FF900989BEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A35981F0B5C5000F3882C /* Assets.xcassets */; };
 		1CA6D5EE1F0B8FF900989BEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6A359A1F0B5C5000F3882C /* LaunchScreen.storyboard */; };
@@ -36,10 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C0A39AD1F22E79C00BA2D67 /* font */ = {isa = PBXFileReference; lastKnownFileType = folder; name = font; path = Resource/font; sourceTree = "<group>"; };
 		1C60B7F41F0E6D7200166B79 /* MyPlaceDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPlaceDataModel.swift; path = Models/MyPlace/MyPlaceDataModel.swift; sourceTree = "<group>"; };
 		1C6A358E1F0B5C5000F3882C /* BeNeatDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeNeatDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C6A35911F0B5C5000F3882C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C6A35931F0B5C5000F3882C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C6A35961F0B5C5000F3882C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C6A35981F0B5C5000F3882C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C6A359B1F0B5C5000F3882C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,7 +95,6 @@
 				1C6A35A41F0B5EB000F3882C /* Views */,
 				1C6A35A31F0B5C9800F3882C /* Models */,
 				1C6A35911F0B5C5000F3882C /* AppDelegate.swift */,
-				1C6A35931F0B5C5000F3882C /* ViewController.swift */,
 				1C6A35951F0B5C5000F3882C /* Main.storyboard */,
 				1C6A35981F0B5C5000F3882C /* Assets.xcassets */,
 				1C6A359A1F0B5C5000F3882C /* LaunchScreen.storyboard */,
@@ -132,6 +130,7 @@
 		1C73DFE01F137406006614F1 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A39AD1F22E79C00BA2D67 /* font */,
 				1C73DFE11F137453006614F1 /* AlamofireRouter.swift */,
 			);
 			name = Resource;
@@ -258,7 +257,7 @@
 				1CAD20AD1F20B961005858B2 /* LoadMoreMyPlaceCell.swift in Resources */,
 				1CA6D5E91F0B8FF900989BEA /* MyPlaceDataModelItem.swift in Resources */,
 				1CA6D5EA1F0B8FF900989BEA /* AppDelegate.swift in Resources */,
-				1CA6D5EB1F0B8FF900989BEA /* ViewController.swift in Resources */,
+				1C0A39AE1F22E79C00BA2D67 /* font in Resources */,
 				1CA6D5EC1F0B8FF900989BEA /* Main.storyboard in Resources */,
 				1CA6D5ED1F0B8FF900989BEA /* Assets.xcassets in Resources */,
 				1CA6D5EE1F0B8FF900989BEA /* LaunchScreen.storyboard in Resources */,
@@ -325,7 +324,6 @@
 				1CAD20AC1F20B724005858B2 /* LoadMoreMyPlaceCell.swift in Sources */,
 				1C95E8BF1F0B88D8004785F6 /* MyPlaceDataModelItem.swift in Sources */,
 				1C95E8C11F0B891B004785F6 /* MyPlaceDetailVC.swift in Sources */,
-				1C6A35941F0B5C5000F3882C /* ViewController.swift in Sources */,
 				1C6A35921F0B5C5000F3882C /* AppDelegate.swift in Sources */,
 				1C95E8BC1F0B88B3004785F6 /* MyPlacesVC.swift in Sources */,
 				1C95E8B81F0B887D004785F6 /* MyPlaceCell.swift in Sources */,

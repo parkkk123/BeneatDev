@@ -70,6 +70,8 @@ class MyPlaceDetailVC: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var mapView: GMSMapView!
     
+    
+    
      var latitude: Double!
      var longtitude: Double!
     
@@ -82,6 +84,8 @@ class MyPlaceDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Place Detail"
       
         configureDetails()
     }

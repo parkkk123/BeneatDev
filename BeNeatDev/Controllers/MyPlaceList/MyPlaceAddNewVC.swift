@@ -17,6 +17,9 @@ class MyPlaceAddNewVC: UIViewController {
     @IBOutlet weak var addressLabel: UITextField!
     @IBOutlet weak var remarkLabel: UITextField!
     
+    @IBOutlet weak var viewWithType: UIView!
+    @IBOutlet weak var viewWithProvince: UIView!
+    
     var latitudeLocation: String! = "18.79974300"
     var longtitudeLocation: String! = "98.96545100"
     
@@ -62,6 +65,7 @@ class MyPlaceAddNewVC: UIViewController {
                     action: #selector(self.closeViewButtonAction)
                 )
                 self.navigationItem.leftBarButtonItem = leftButtonItem
+                self.title = "Edit Place"
             }
         }
     }
@@ -78,6 +82,8 @@ class MyPlaceAddNewVC: UIViewController {
         
         if isEditDetail {
             loadDataToShow()
+        }else{
+            self.title = "Add Place"
         }
         
     }
@@ -117,7 +123,7 @@ class MyPlaceAddNewVC: UIViewController {
         // Will set a custom width instead of the anchor view width
         dropDownType.width = view.frame.size.width-widthBorder*2
         
-        dropDownType.bottomOffset = CGPoint(x: widthBorder, y: selectType.frame.origin.y)
+        dropDownType.bottomOffset = CGPoint(x: widthBorder, y: viewWithType.frame.origin.y)
     }
     
     func configureDropDownProvince() {
@@ -142,7 +148,7 @@ class MyPlaceAddNewVC: UIViewController {
         // Will set a custom width instead of the anchor view width
         dropDownProvince.width = view.frame.size.width-widthBorder*2
         
-        dropDownProvince.bottomOffset = CGPoint(x: widthBorder, y: selectProvince.frame.origin.y)
+        dropDownProvince.bottomOffset = CGPoint(x: widthBorder, y: viewWithProvince.frame.origin.y)
     }
 
     override func didReceiveMemoryWarning() {

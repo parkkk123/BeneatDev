@@ -38,7 +38,8 @@ class MyPlacesVC: UITableViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = "My Places"
         myTableView.register(MyPlaceCell.nib, forCellReuseIdentifier: MyPlaceCell.identifier)
         myTableView.register(LoadMoreMyPlaceCell.nib, forCellReuseIdentifier: LoadMoreMyPlaceCell.identifier)
         myTableView.estimatedRowHeight = 20
