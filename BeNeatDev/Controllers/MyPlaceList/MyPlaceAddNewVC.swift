@@ -9,6 +9,18 @@
 import UIKit
 import DropDown
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class MyPlaceAddNewVC: UIViewController {
     
     @IBOutlet weak var namePlaceLabel: UITextField!
@@ -85,6 +97,8 @@ class MyPlaceAddNewVC: UIViewController {
         }else{
             self.title = "Add Place"
         }
+        
+        self.hideKeyboardWhenTappedAround()
         
     }
     
@@ -283,5 +297,13 @@ class MyPlaceAddNewVC: UIViewController {
     
     
 
+}
+
+extension MyPlaceAddNewVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+    {
+        textField.resignFirstResponder()
+        return true
+    }
 }
 
