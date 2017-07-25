@@ -31,6 +31,10 @@
 		1CAD20AC1F20B724005858B2 /* LoadMoreMyPlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */; };
 		1CAD20AD1F20B961005858B2 /* LoadMoreMyPlaceCell.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */; };
 		1CB9134A1F0E2DEA00779A7B /* MyPlaceAddNewVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CA6D5F41F0CAC9300989BEA /* MyPlaceAddNewVC.swift */; };
+		1CE319861F272CD800C31E4E /* GetReferralCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE319851F272CD800C31E4E /* GetReferralCodeVC.swift */; };
+		1CE319871F272CF800C31E4E /* GetReferralCodeVC.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CE319851F272CD800C31E4E /* GetReferralCodeVC.swift */; };
+		1CE3198A1F27306300C31E4E /* GetReferralCodeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE319891F27306300C31E4E /* GetReferralCodeDataModel.swift */; };
+		1CE3198B1F27356B00C31E4E /* GetReferralCodeDataModel.swift in Resources */ = {isa = PBXBuildFile; fileRef = 1CE319891F27306300C31E4E /* GetReferralCodeDataModel.swift */; };
 		506E60D46B344DA5C9CEADFB /* Pods_BeNeatDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A14F8C3FD94479DCF7979A6 /* Pods_BeNeatDev.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +56,8 @@
 		1CA6D5F41F0CAC9300989BEA /* MyPlaceAddNewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyPlaceAddNewVC.swift; path = Controllers/MyPlaceList/MyPlaceAddNewVC.swift; sourceTree = "<group>"; };
 		1CAD20A91F20B683005858B2 /* LoadMoreMyPlaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadMoreMyPlaceCell.xib; path = Views/MyPlaceList/LoadMoreMyPlaceCell.xib; sourceTree = "<group>"; };
 		1CAD20AB1F20B724005858B2 /* LoadMoreMyPlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoadMoreMyPlaceCell.swift; path = Views/MyPlaceList/LoadMoreMyPlaceCell.swift; sourceTree = "<group>"; };
+		1CE319851F272CD800C31E4E /* GetReferralCodeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetReferralCodeVC.swift; path = Controllers/GetReferralCode/GetReferralCodeVC.swift; sourceTree = "<group>"; };
+		1CE319891F27306300C31E4E /* GetReferralCodeDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetReferralCodeDataModel.swift; path = Models/GetReferralCode/GetReferralCodeDataModel.swift; sourceTree = "<group>"; };
 		3A14F8C3FD94479DCF7979A6 /* Pods_BeNeatDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeNeatDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEFE3D19839B3C8E589874A /* Pods-BeNeatDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeNeatDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeNeatDev/Pods-BeNeatDev.release.xcconfig"; sourceTree = "<group>"; };
 		C60B1857EC4A058BB5D4D5DC /* Pods-BeNeatDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeNeatDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeNeatDev/Pods-BeNeatDev.debug.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 		1C6A35A31F0B5C9800F3882C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1CE319881F27301E00C31E4E /* GetReferralCode */,
 				1C95E8BD1F0B88C9004785F6 /* MyPlace */,
 			);
 			name = Models;
@@ -122,6 +129,7 @@
 		1C6A35A51F0B5EC100F3882C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1CE319841F272C9700C31E4E /* GetReferralCode */,
 				1C95E8BA1F0B8885004785F6 /* MyPlaceList */,
 			);
 			name = Controllers;
@@ -164,6 +172,22 @@
 				1C60B7F41F0E6D7200166B79 /* MyPlaceDataModel.swift */,
 			);
 			name = MyPlace;
+			sourceTree = "<group>";
+		};
+		1CE319841F272C9700C31E4E /* GetReferralCode */ = {
+			isa = PBXGroup;
+			children = (
+				1CE319851F272CD800C31E4E /* GetReferralCodeVC.swift */,
+			);
+			name = GetReferralCode;
+			sourceTree = "<group>";
+		};
+		1CE319881F27301E00C31E4E /* GetReferralCode */ = {
+			isa = PBXGroup;
+			children = (
+				1CE319891F27306300C31E4E /* GetReferralCodeDataModel.swift */,
+			);
+			name = GetReferralCode;
 			sourceTree = "<group>";
 		};
 		9954801C86B08E995B3C99B9 /* Frameworks */ = {
@@ -218,7 +242,7 @@
 				TargetAttributes = {
 					1C6A358D1F0B5C5000F3882C = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = UYFKKHJ9QP;
+						DevelopmentTeam = N6YAUH8RKZ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -250,7 +274,9 @@
 				1CA6D5E51F0B8FF900989BEA /* MyPlacesVC.swift in Resources */,
 				1C73DFE31F138DCA006614F1 /* AlamofireRouter.swift in Resources */,
 				1CA6D5E61F0B8FF900989BEA /* MyPlaceDetailVC.swift in Resources */,
+				1CE319871F272CF800C31E4E /* GetReferralCodeVC.swift in Resources */,
 				1CA6D5E71F0B8FF900989BEA /* MyPlaceCell.swift in Resources */,
+				1CE3198B1F27356B00C31E4E /* GetReferralCodeDataModel.swift in Resources */,
 				1CA6D5E81F0B8FF900989BEA /* MyPlaceCell.xib in Resources */,
 				1CAD20AA1F20B683005858B2 /* LoadMoreMyPlaceCell.xib in Resources */,
 				1CB9134A1F0E2DEA00779A7B /* MyPlaceAddNewVC.swift in Resources */,
@@ -322,12 +348,14 @@
 				1C73DFE21F137453006614F1 /* AlamofireRouter.swift in Sources */,
 				1CA6D5F51F0CAC9300989BEA /* MyPlaceAddNewVC.swift in Sources */,
 				1CAD20AC1F20B724005858B2 /* LoadMoreMyPlaceCell.swift in Sources */,
+				1CE3198A1F27306300C31E4E /* GetReferralCodeDataModel.swift in Sources */,
 				1C95E8BF1F0B88D8004785F6 /* MyPlaceDataModelItem.swift in Sources */,
 				1C95E8C11F0B891B004785F6 /* MyPlaceDetailVC.swift in Sources */,
 				1C6A35921F0B5C5000F3882C /* AppDelegate.swift in Sources */,
 				1C95E8BC1F0B88B3004785F6 /* MyPlacesVC.swift in Sources */,
 				1C95E8B81F0B887D004785F6 /* MyPlaceCell.swift in Sources */,
 				1C60B7F51F0E6D7200166B79 /* MyPlaceDataModel.swift in Sources */,
+				1CE319861F272CD800C31E4E /* GetReferralCodeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,10 +481,10 @@
 			baseConfigurationReference = C60B1857EC4A058BB5D4D5DC /* Pods-BeNeatDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UYFKKHJ9QP;
+				DEVELOPMENT_TEAM = N6YAUH8RKZ;
 				INFOPLIST_FILE = BeNeatDev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GNoThaiGameRo.BeNeatDev;
+				PRODUCT_BUNDLE_IDENTIFIER = PanPark.BeNeatDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -467,10 +495,10 @@
 			baseConfigurationReference = 4BEFE3D19839B3C8E589874A /* Pods-BeNeatDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UYFKKHJ9QP;
+				DEVELOPMENT_TEAM = N6YAUH8RKZ;
 				INFOPLIST_FILE = BeNeatDev/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = GNoThaiGameRo.BeNeatDev;
+				PRODUCT_BUNDLE_IDENTIFIER = PanPark.BeNeatDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

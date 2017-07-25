@@ -17,6 +17,7 @@ enum AlamofireRouter: URLRequestConvertible {
     case updateMyPlace(id: String,item : MyPlaceDataModelItem)
     case addMyPlace(item: MyPlaceDataModelItem)
     case getDetailMyPlace(id: Int)
+    case getReferralCode(user_id: Int)
     
     public func asURLRequest() throws -> URLRequest {
         let baseURLString = "https://dev.beneat.co/api"
@@ -41,6 +42,8 @@ enum AlamofireRouter: URLRequestConvertible {
             return "/users-places/"
         case .getDetailMyPlace(let id):
             return "/users-places/\(id)/"
+        case .getReferralCode(let user_id):
+            return "/users/\(user_id)/referral-code"
         }
     }
     
@@ -56,14 +59,13 @@ enum AlamofireRouter: URLRequestConvertible {
             return .post
         case .getDetailMyPlace:
             return .get
-        
+        case .getReferralCode:
+            return .get
         }
     }
     
     public var parameters: [String: Any]? {
         switch self {
-        case .getDataMyPlace:
-            return nil
         case .deleteMyPlace(let id):
             return ["id": id]
         case .updateMyPlace(let id,let item):
@@ -87,9 +89,10 @@ enum AlamofireRouter: URLRequestConvertible {
                 "remark": item.remark!
                 
             ]
-        case .getDetailMyPlace:
+        default:
             return nil
         }
+        
     }
     
     public var headers: [String: String]? {

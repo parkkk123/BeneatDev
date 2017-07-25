@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -395,23 +396,107 @@
             </objects>
             <point key="canvasLocation" x="581.60000000000002" y="139.880059970015"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="lX4-wZ-Ezf">
+        <!--Get Referral CodeVC-->
+        <scene sceneID="TRJ-Ex-wXc">
             <objects>
-                <viewController id="Soy-V8-KfJ" sceneMemberID="viewController">
+                <viewController id="mVE-Yd-GPU" customClass="GetReferralCodeVC" customModule="BeNeatDev" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="f7g-6x-iRl"/>
-                        <viewControllerLayoutGuide type="bottom" id="09v-E0-tCK"/>
+                        <viewControllerLayoutGuide type="top" id="77I-FX-GEq"/>
+                        <viewControllerLayoutGuide type="bottom" id="1yO-pk-l2M"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q8y-Cs-NAr">
+                    <view key="view" contentMode="scaleToFill" id="7xW-oC-deF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="1cv-WD-wvr">
+                                <rect key="frame" x="118.5" y="94" width="139" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1cv-WD-wvr" secondAttribute="height" multiplier="1:1" id="C0d-vX-Xcq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer Friends, Get 20% OFF!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="7Ki-VL-JO8">
+                                <rect key="frame" x="16" y="247" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nPP-Ig-utc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-SemiBold" family="Kanit" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.69803921568627447" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give your friends 20% OFF, and get 20% OFF when they book BeNeat." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Et0-Do-QSi">
+                                <rect key="frame" x="29" y="276" width="318" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Wnd-RZ-eRy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="15"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Referral Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLv-nx-jKQ">
+                                <rect key="frame" x="118.5" y="359" width="138" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="sdH-pP-RiG"/>
+                                    <constraint firstAttribute="height" constant="21" id="zxp-pB-HUH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="16"/>
+                                <color key="textColor" red="0.61176470589999998" green="0.61176470589999998" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading....." textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu3-6y-LR4">
+                                <rect key="frame" x="16" y="402" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="olN-8u-MUJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="27"/>
+                                <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6n-rb-UCG">
+                                <rect key="frame" x="16" y="465" width="343" height="46"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="E2D-wp-o2d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Kanit-Regular" family="Kanit" pointSize="13"/>
+                                <state key="normal" title="SHARE YOUR CODE">
+                                    <color key="titleColor" red="0.99595564603805542" green="0.99619156122207642" blue="0.99164885282516479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButton:" destination="mVE-Yd-GPU" eventType="touchUpInside" id="fMd-To-Cdp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Et0-Do-QSi" firstAttribute="top" secondItem="7Ki-VL-JO8" secondAttribute="bottom" constant="8" symbolic="YES" id="3Eq-fe-LkU"/>
+                            <constraint firstItem="7Ki-VL-JO8" firstAttribute="leading" secondItem="7xW-oC-deF" secondAttribute="leadingMargin" id="D6z-wW-lsU"/>
+                            <constraint firstItem="Iu3-6y-LR4" firstAttribute="centerX" secondItem="s6n-rb-UCG" secondAttribute="centerX" id="DRd-Jo-7Nh"/>
+                            <constraint firstItem="s6n-rb-UCG" firstAttribute="trailing" secondItem="7xW-oC-deF" secondAttribute="trailingMargin" id="EWc-Oo-FwR"/>
+                            <constraint firstItem="7Ki-VL-JO8" firstAttribute="top" secondItem="1cv-WD-wvr" secondAttribute="bottom" constant="14" id="IpH-XH-Mg3"/>
+                            <constraint firstItem="Et0-Do-QSi" firstAttribute="centerX" secondItem="gLv-nx-jKQ" secondAttribute="centerX" id="L84-0E-OjY"/>
+                            <constraint firstItem="Et0-Do-QSi" firstAttribute="leading" secondItem="7xW-oC-deF" secondAttribute="leadingMargin" constant="13" id="Qg3-ND-sKQ"/>
+                            <constraint firstItem="gLv-nx-jKQ" firstAttribute="top" secondItem="Et0-Do-QSi" secondAttribute="bottom" constant="27" id="SmJ-px-WH9"/>
+                            <constraint firstItem="s6n-rb-UCG" firstAttribute="top" secondItem="Iu3-6y-LR4" secondAttribute="bottom" constant="29" id="VPd-f4-xbq"/>
+                            <constraint firstItem="s6n-rb-UCG" firstAttribute="leading" secondItem="7xW-oC-deF" secondAttribute="leadingMargin" id="VmR-um-Anm"/>
+                            <constraint firstItem="7Ki-VL-JO8" firstAttribute="centerX" secondItem="Et0-Do-QSi" secondAttribute="centerX" id="XZP-q0-sfY"/>
+                            <constraint firstItem="1cv-WD-wvr" firstAttribute="leading" secondItem="gLv-nx-jKQ" secondAttribute="leading" id="aeW-vh-eWc"/>
+                            <constraint firstItem="1cv-WD-wvr" firstAttribute="centerX" secondItem="7Ki-VL-JO8" secondAttribute="centerX" id="gpI-lq-BHL"/>
+                            <constraint firstItem="Iu3-6y-LR4" firstAttribute="leading" secondItem="7xW-oC-deF" secondAttribute="leadingMargin" id="hYm-lK-hne"/>
+                            <constraint firstItem="gLv-nx-jKQ" firstAttribute="centerX" secondItem="Iu3-6y-LR4" secondAttribute="centerX" id="hpd-hi-fBH"/>
+                            <constraint firstItem="Iu3-6y-LR4" firstAttribute="top" secondItem="gLv-nx-jKQ" secondAttribute="bottom" constant="22" id="j2G-0Z-YbI"/>
+                            <constraint firstItem="1cv-WD-wvr" firstAttribute="top" secondItem="77I-FX-GEq" secondAttribute="bottom" constant="30" id="lJn-Rr-FEE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="mDx-Hv-feo"/>
+                    <connections>
+                        <outlet property="referralCodeLabel" destination="Iu3-6y-LR4" id="yb5-G5-nKx"/>
+                        <outlet property="shareCodeBtn" destination="s6n-rb-UCG" id="hAU-gR-DR6"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d6c-qh-83N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o5I-2E-85Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="585" y="952"/>
+            <point key="canvasLocation" x="1503.2" y="919.79010494752629"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="v1G-0z-uBL">
@@ -449,7 +534,28 @@
             </objects>
             <point key="canvasLocation" x="2215" y="133"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EIo-xW-drn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TBU-iY-fXt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="toN-5R-MSP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mVE-Yd-GPU" kind="relationship" relationship="rootViewController" id="PH3-Gs-mQl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rqq-lm-Rho" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564" y="919.79010494752629"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="227" height="227"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0qk-hT-ZyP"/>
     </inferredMetricsTieBreakers>
