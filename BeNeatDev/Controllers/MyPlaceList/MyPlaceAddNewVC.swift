@@ -117,7 +117,7 @@ class MyPlaceAddNewVC: UIViewController {
             }
             
             
-            self.selectType.titleLabel?.text = PlaceSizeID(rawValue: self.selectedType-1)?.GetName
+            self.selectType.titleLabel?.text = item
         }
         
         // Will set a custom width instead of the anchor view width
@@ -142,7 +142,7 @@ class MyPlaceAddNewVC: UIViewController {
             print("Selected item: \(item) at index: \(index)")
             self.selectedProvince = index + 1
             
-            self.selectProvince.titleLabel?.text = ProvinceID(rawValue: self.selectedProvince-1)?.GetName
+            self.selectProvince.titleLabel?.text = item
         }
         
         // Will set a custom width instead of the anchor view width
